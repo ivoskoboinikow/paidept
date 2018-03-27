@@ -1,0 +1,59 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+	.leftline
+		transform: rotate(0deg)
+		width: 100%
+		.btn-logo
+			transform: rotate(0deg)
+			&:hover
+				transform: rotate(360deg)
+	.openleftline
+		left: 0			
+	.sidebarBtn
+		transform: rotate(0deg)
+		&:hover
+			transform: rotate(360deg)
+ 
+	.left-log
+		margin: 0
+	.page-title	
+		font-size: 20px
+
+//Medium: ≥768px
++media-breakpoint-down(md)
+
+
+//Small: ≥576px
++media-breakpoint-down(sm)
+		.headhesive
+  		display: none
+//Extra small: >0
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+	
+//Medium: ≤768px
++media-breakpoint-up(md)
+	 
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+	
+//Extra large: ≤1200px
++media-breakpoint-up(xl)

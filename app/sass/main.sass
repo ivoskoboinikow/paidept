@@ -1,0 +1,721 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: $bel
+
+ html,body
+	height: 100%
+
+
+
+h2
+	font-size: 36px
+	font-weight: initial
+	
+h3
+	font-size: 32px
+	font-weight: initial
+
+h4
+	font-size: 24px
+	font-weight: initial
+
+h5
+	font-size: 16px
+	font-weight: initial
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	background: -webkit-linear-gradient(top,  $fon_ot 0%, $fon_do 25%, $fon_do 50%, $fon_do 75%, $fon_do 100%)
+	section
+		margin-top: 90px
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+			a:hover
+				color: $fon_do
+
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.ishome
+	width: 100%
+.my-page	
+	
+/*HEADER*/
+
+.topline
+	position: relative 
+	z-index: 5
+
+.toplinebar
+	margin: 50px
+	.top-links
+		display: inline-flex
+		&_login:after
+			content: ' '
+			display: block
+			width: 147px
+			height: 7px
+			background-image: url('../img/lk_btn_underline.png')
+	.top-link,a
+		color: $accent
+		font-size: 18px
+		&_login
+			display: inline-flex
+			font-size: 18px
+			color: $accent
+		&_login:hover
+			cursor: pointer
+			color: $hover_col
+		&_nav
+			margin-right: 60px
+		&_app
+			font-size: 24px
+	.top-link,a:hover
+		color: $hover_col
+
+		
+.form-search,
+.form-group
+	display: inline-flex
+	border: 1px solid $accent
+	min-height: 35px
+	border-radius: 4px
+	float: right
+	.form-control
+		padding: 0 10px 
+		width: 130px
+		min-height: 35px
+		border: none
+		outline: none
+		-webkit-appearance: none
+		vertical-align: middle
+		background: transparent
+	.btn-link
+		border: none
+		outline: none
+		-webkit-appearance: none
+		vertical-align: middle
+		background: none
+		.fa-search
+		color: $accent
+
+
+
+
+
+
+
+.headhesive
+	position: fixed
+	top: 0
+	width: 100%
+	transform: translateY(-100%)
+	transition:  0.5s
+	
+
+.headhesive--stick
+	transform: translateY(0%)
+	background: -webkit-linear-gradient(top,  $fon_ot 0%, $fon_do 100%)
+	.toplinebar
+		margin: 20px
+
+
+
+.leftline
+	display: block
+	width: 100vh
+	background: -webkit-linear-gradient(right,  #E8E5F2 0%, #F6EFF5 100%)	
+	transform-origin: left top
+	transform: rotate(-90deg) translateX(-100%)
+	zoom: 1
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 10000
+	transition: .6s
+.icon-menu
+	display: block
+	cursor: pointer
+	margin: 20px -30px;
+	&:hover
+		
+	&:active
+
+.left-log
+	margin: 0 30px
+	.btn-logo
+		width: 65px
+		transform: rotate(90deg)
+		transition: .6s
+		&:hover
+			transform: rotate(450deg)
+			transition: .6s
+.sidebarBtn
+	position: absolute
+	border: none
+	background: transparent
+	transform: rotate(90deg)
+	transition:  .6s
+	background: url("../img/menu_icn.png")
+	background-repeat: no-repeat
+	width: 54px
+	height: 54px
+	&:hover
+		transform: rotate(451deg)
+		transition:  .6s
+	&:focus
+		outline: none
+
+
+.btnOpen
+	background: url("../img/close.png")
+	background-repeat: no-repeat
+	background-position: center
+	height: 54px
+	width: 54px
+
+
+.openleftline
+	left: 300px
+	background: $left_line
+	opacity: 50
+	
+
+.page-title
+	font-family: $goramond
+	font-size: 25px
+	text-align: center
+	color: $accent
+	margin: 20px
+	text-transform: uppercase
+	letter-spacing: 0.4rem
+
+.boc-menu
+	font-family: $goramond 
+	color: $accent
+	font-size: 20px
+
+
+//SIDEBAR
+
+.sidebar
+	text-align: center
+	position: fixed
+	top: 0
+	left: -300px
+	background: $left_line
+	width: 300px
+	height: 100%
+	z-index: 10000
+	transition: .6s
+	.firstblock,ul
+		margin: 0
+		padding: 20px 0
+		li
+			list-style: none
+			//display: block
+			a
+				display: inline-block
+				padding: 5px 20px
+				color: $accent
+				text-decoration: none
+				font-family: $goramond
+				font-size: 22px
+			& a:hover
+				color: $hover_col
+				padding-left: 25px
+				background-image: url("../img/li_active.png")
+				background-position: left 
+				background-repeat: no-repeat
+		
+
+.secondblock
+	display: none
+	li
+		text-align: left
+		a
+			font-size: 16px !important
+
+.activli
+	display: block
+
+.navBlock
+	margin-top: 150px
+	text-align: center
+
+
+
+.open
+	left: 0
+	opacity: 50
+
+
+.bt-mmenu
+	width: 54px
+	height: 54px
+
+
+
+.subnav 
+	padding: 0
+	ul
+		list-style-type: none
+		padding: 0	 		
+		li
+			display: inline-flex
+	a
+		padding-right: 60px
+		color: $accent
+		font-size: 18px
+	a:hover
+		font-family: $default-font 
+		padding-left: 25px 
+		color: $active
+		text-decoration: none
+		background-image: url("../img/li_active.png")
+		background-position: left 
+		background-repeat: no-repeat
+
+/*HEADER END*/
+
+/*CONTENT*/
+.infobox
+	display: block
+	color: $txt
+	.txtbox
+		background: -webkit-linear-gradient(top,  #F2EBF3 0%, #F6EFF5 100%)
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+		padding: 50px 0
+		&:after
+			display: inline-block
+			content: ' '
+			width: 100%
+			height: 62px
+			background: url("../img/bgTitleDotsBR.png")
+			background-repeat: no-repeat
+			background-position: 98%
+			margin-bottom: -45px
+		p
+			font-size: 21px
+		a
+			color: $txt
+			text-decoration: underline
+			&:hover
+				color: $active
+
+.baner
+	padding: 20px 0 100px 0;
+
+.item
+	height: 150px
+	background: $accent
+	color: $bel
+	padding: 1rem
+	p
+		font-family: $goramonditalic
+		font-size: 60px
+		margin: -70px 0
+	.owl_img
+		height: 134% !important
+		margin: -21px -19px !important
+		width: 104% !important
+		display: inline-flex !important
+		
+
+.owl-dots
+	text-align: center
+	.owl-dot
+		display: inline-block
+		width: 15px
+		height: 15px
+		margin: 15px 15px
+		background: $accent
+		border-radius: 30px
+	.active
+		background: #CD97BF
+
+.news_row
+	color: $accent
+	h3
+		font-family: $default-font
+		font-size: 30px
+		margin-bottom: 30px
+		text-transform: uppercase
+		&:before
+			content: ' '
+			width: 44px
+			height: 44px
+			display: inline-flex
+			background-image: url('../img/4dots.png')
+			background-repeat: no-repeat
+			margin-right: 25px
+	.item
+		height: 370px
+		background: $accent
+		color: $bel
+		padding: 0
+		margin-bottom: 30px
+		&:hover
+			box-shadow: 10px 10px 20px rgba(0,0,0,0.7), 10px 10px 10px rgba(0,1,0,.22)
+	.item2	
+		height: 770px
+		background: #DEA
+		color: $accent
+		padding: 0
+		margin-bottom: 30px
+	.loock
+		color: $accent
+		&:hover
+			text-decoration: none
+			color: $hover_col
+		&:after
+    	content: ''
+    	display: flex
+    	margin: 0 4%
+    	position: absolute
+    	border: 5px solid transparent	
+    	border-top: 5px solid $accent
+    	&:hover
+    		color: $hover_col
+		
+
+//newsbox
+
+.newsbox
+	margin-top: 50px  
+	.container
+		padding: 60px 15px
+		background-color: $bel
+		background-image: url('../img/bgTitleDotsLT.png')
+		background-repeat: no-repeat
+		background-position: 99% 2%
+		//transform: rotate(90deg) translateX(50px) translateY(-1490%)
+		.img_item
+			height: 150px
+			background: #CD97BF
+			color: $bel
+			padding: 0
+			margin-bottom: 30px	
+		.loock
+			color: $accent
+			font-size: 14px
+			text-align: right
+			display: block
+			width: 100%
+		.zagolovok
+			color: #000
+			&:hover
+				color: $hover_col
+
+
+
+
+
+//newsbox end
+
+//Catalog
+.catalog
+	color: $accent
+	h3
+		font-family: $default-font
+		font-size: 30px
+		margin-bottom: 30px
+		text-transform: uppercase
+		&:before
+			content: ' '
+			width: 44px
+			height: 44px
+			display: inline-flex
+			background-image: url('../img/4dots.png')
+			background-repeat: no-repeat
+			margin-right: 25px
+	.item
+		height: 370px
+		background: $accent
+		color: $bel
+		padding: 0
+		margin-bottom: 30px
+		&:hover
+			box-shadow: 10px 10px 20px rgba(0,0,0,0.7), 10px 10px 10px rgba(0,1,0,.22)
+
+
+//Catalog end
+
+/*Form*/
+.modalfotm
+	display: none
+	position: fixed
+	z-index: 100000
+	left: 0
+	top: 0
+	width: 100vw
+	height: 100vh
+	overflow: auto
+	background-color: rgba(0,0,0,0.5)
+.loginForm
+	background: $bgc
+	width: 430px
+	height: 470px 
+	padding: 5px
+	margin: 30% 0
+	.titleForm
+		margin: 0 40px
+		font-family: $goramond
+		text-transform: uppercase
+		font-size: 18px
+	.closebtn
+		vertical-align: right
+		cursor: pointer
+		border: 1px solid $hover_col
+		border-radius: 50px
+		//transform: translateX(65px) translateY(5px)
+		//background: url("../img/close.png")
+		background: transparent
+		height: 39px
+		width: 39px
+		&:before
+			content: ''
+			background-color: $hover_col
+			position: absolute
+			height: 1px
+			width: 31px
+			top: 19px		
+			left: 19px
+			transform: rotate(-45deg)
+		&:after
+			content: ''
+			background-color: $hover_col
+			position: absolute
+			height: 1px
+			width: 31px
+			top: 19px
+			left: 19px
+			transform: rotate(45deg)
+
+.form-btn
+	margin-top: 25px
+	font-size: 20px
+	font-family: $goramond
+	text-align: center
+	p
+		font-size: 14px
+		margin: 0
+		font-family: $default-font	
+	.primary
+		width: 100%
+		height: 60px
+		border-radius: 5px
+		background-color: $hover_col
+		color: $bel
+		font-size: 18px
+		font-family: $default-font
+	.fa-vk
+		font-size: 30px
+		background-color: #6995C7
+		color: $bel
+		padding: 4px
+		border-radius: 4px
+	.fa-facebook
+		font-size: 30px
+		padding: 4px 10px
+		border-radius: 4px
+		color: $bel
+		background-color: #0056B3
+		
+.pasmember
+	text-align: center
+	margin-top: 40px
+
+
+.bg-form
+	background: $bel
+	width: 360px
+	height: 380px
+	padding: 40px 20px
+	.fotm-login
+		font-size: 14px
+	.form-inputs
+		display: block
+		&_input
+			padding: 10px
+			border-radius: 5px
+			border: 2px solid $hover_col
+			width: 320px
+			height: 40px
+			margin: 10px 0
+			&::-webkit-input-placeholder,
+				-moz-placeholder,-moz-placeholder,-ms-input-placeholder
+				text-align: center	
+				transition: .6s
+			&:focus::-webkit-input-placeholder,
+				-moz-placeholder,-moz-placeholder,-ms-input-placeholder
+				color: transparent
+				transition:  .6s
+				
+
+
+	.form-info
+		margin-top: 10px
+		&_stipulation
+			padding: px
+
+
+
+/*FormEnd*/
+
+//contactform
+.contactform
+	margin: 30px 0
+	.container
+		background-color: $bel
+		height: 100%
+		padding: 50px 15px
+		margin-bottom: 100px
+		&:before
+			content: ' '
+			background-image: url('../img/bgTitleDotsBR.png')
+			background-repeat: no-repeat
+			display: inline-flex
+			width: 158px
+			height: 62px
+			transform: rotate(180deg) translateY(50%)
+		&:after
+			content: ' '
+			background-image: url('../img/bgTitleDotsBR.png')
+			background-repeat: no-repeat
+			display: inline-flex
+			width: 158px
+			height: 62px
+			float: right
+			transform: translateY(-40%)
+	.cfl
+		text-align: center
+		font-family: $goramond
+		& p
+			font-size: 48px
+			line-height: 1
+	.submit_btn
+		width: 230px
+		height: 50px
+		font-size: 18px
+		font-family: $default-font
+		color: $bel
+		border-radius: 8px
+		background-color: $hover_col
+		border: 1px
+		&:hover
+			background-color: $active
+		&:focus
+			outline: none
+
+	.cfr
+	.cont_form
+		width: 100%
+		height: 45px
+		margin: 0 0 15px 0 
+		border-radius: 4px
+		background-color: #F6EFF5
+		border: none
+		&::-webkit-input-placeholder,
+			-moz-placeholder,-moz-placeholder,-ms-input-placeholder
+			text-align: center	
+			transition: .6s
+		&:focus::-webkit-input-placeholder,
+			-moz-placeholder,-moz-placeholder,-ms-input-placeholder
+			color: transparent
+			transition: .6s
+		&_text
+			width: 100%
+			margin: 0 0 15px 0
+			border-radius: 4px
+			background-color: #F6EFF5
+			border: none
+			&::-webkit-input-placeholder,
+				-moz-placeholder,-moz-placeholder,-ms-input-placeholder
+				text-align: center	
+				transition: .6s
+			&:focus::-webkit-input-placeholder,
+				-moz-placeholder,-moz-placeholder,-ms-input-placeholder
+				color: transparent
+				transition: .6s
+
+
+//contactform end
+.my-sec-1
+	padding: 40px
+	margin-top: 40px			
+/*CONTENT END*/
+
+.my-footer
+	background-color: #9E929C
+	.container
+		padding: 30px 15px
+		color: $futer_col
+		ul
+			list-style: none
+			a
+				color: $futer_col
+				&:hover
+					text-decoration: none
+					color: $hover_col
+		.firm_doc
+			font-size: 12px
+			a
+				color: $futer_col
+				&:hover
+					text-decoration: none
+					color: $hover_col
+		.social-menu
+			font-size: 18px
+			.sn-icon
+				background: #f4eef5
+				color: #9E929C
+				border-radius: 100%
+				box-shadow: 0 0 1px rgba(0, 0, 0, 0.1)
+				float: left
+				width: 30px
+				height: 30px
+				line-height: 30px
+				text-align: center
+				margin-right: 5px
+				&:hover
+					color: $bl_cl
+		.mob-app
+			margin-top: 40px
+			img
+				display: block
+				background-color: #f4eef5
+				width: 100px
+				padding: 5px
+				margin-top: 10px
+				border-radius: 4px	 
+
+
+
+
+
+@import "media" // Always at the end
